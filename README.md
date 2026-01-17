@@ -1,33 +1,33 @@
-Cricket Academy
+🏏 Cricket Academy
 
 A simple frontend web project for cricket lovers.
 
-Features
+✨ Features
 
-Cricket tutorial videos
+🎥 Cricket tutorial videos
 
-Motivational stories of cricketers
+🌟 Motivational cricket stories
 
-Training and fitness tips
+💪 Training & fitness tips
 
-Personalized greeting using user input
+👤 Personalized user greeting
 
-Responsive design
+📱 Responsive design
 
-Technologies Used
+🛠️ Technologies
 
-HTML
+🧱 HTML
 
-CSS
+🎨 CSS
 
-JavaScript
+⚙️ JavaScript
 
-How to Run
+▶️ How to Run
 
-Open index.html in a web browser
+📂 Open index.html in a browser
 
-No installation required
+❌ No installation needed
 
-Purpose
+🎯 Purpose
 
-Made for learning and practice of frontend development.
+Built for frontend learning and practice.
