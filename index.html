@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Academy - Master Your Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="animated-bg">
+    <div class="cricket-ball ball-1"></div>
+    <div class="cricket-ball ball-2"></div>
+    <div class="cricket-ball ball-3"></div>
+  </div>
+
+  <div class="screen active" id="welcomeScreen">
+    <div class="welcome-container">
+      <div class="cricket-icon">🏏</div>
+      <h1 class="main-title">
+        <span class="title-word">Cricket</span>
+        <span class="title-word">Academy</span>
+      </h1>
+      <p class="subtitle">Your Journey to Cricket Excellence Starts Here</p>
+
+      <div class="input-group">
+        <div class="input-wrapper">
+          <label for="userName">Your Name</label>
+          <input type="text" id="userName" placeholder="Enter your name" autocomplete="off">
+          <span class="input-border"></span>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="favPlayer">Favorite Cricketer</label>
+          <input type="text" id="favPlayer" placeholder="Who inspires you?" autocomplete="off">
+          <span class="input-border"></span>
+        </div>
+      </div>
+
+      <button class="cta-button" id="startJourney">
+        <span>Start Your Journey</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="screen" id="dashboardScreen">
+    <nav class="navbar">
+      <div class="nav-brand">
+        <span class="nav-icon">🏏</span>
+        <span class="nav-title">Cricket Academy</span>
+      </div>
+      <div class="user-info">
+        <span id="userGreeting"></span>
+      </div>
+    </nav>
+
+    <div class="dashboard-container">
+      <h2 class="dashboard-title" id="personalGreeting"></h2>
+
+      <div class="cards-grid">
+        <div class="feature-card" data-section="tutorials">
+          <div class="card-icon tutorials-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </div>
+          <h3>Legendary Tutorials</h3>
+          <p>Master batting, bowling, fielding & wicketkeeping from the best</p>
+          <div class="card-footer">
+            <span class="badge">4 Categories</span>
+          </div>
+        </div>
+
+        <div class="feature-card" data-section="stories">
+          <div class="card-icon stories-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3>Motivational Stories</h3>
+          <p>Get inspired by legends who conquered all odds</p>
+          <div class="card-footer">
+            <span class="badge">5 Stories</span>
+          </div>
+        </div>
+
+        <div class="feature-card" data-section="training">
+          <div class="card-icon training-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
+          </div>
+          <h3>Training & Tips</h3>
+          <p>Professional drills, fitness routines & mental preparation</p>
+          <div class="card-footer">
+            <span class="badge">5 Programs</span>
+          </div>
+        </div>
+
+        <div class="feature-card" data-section="about">
+          <div class="card-icon about-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+          </div>
+          <h3>About Us</h3>
+          <p>Meet the team behind your cricket journey</p>
+          <div class="card-footer">
+            <span class="badge">Connect</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modalOverlay"></div>
+
+  <div class="modal" id="tutorialsModal">
+    <div class="modal-header">
+      <h2>Legendary Tutorials</h2>
+      <button class="close-btn" data-close="tutorials">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="video-tabs">
+        <button class="tab-btn active" data-tab="batting">Batting</button>
+        <button class="tab-btn" data-tab="bowling">Bowling</button>
+        <button class="tab-btn" data-tab="fielding">Fielding</button>
+        <button class="tab-btn" data-tab="wicketkeeping">Wicketkeeping</button>
+      </div>
+      <div class="video-grid" id="videoGrid"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="storiesModal">
+    <div class="modal-header">
+      <h2>Motivational Stories</h2>
+      <button class="close-btn" data-close="stories">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="stories-container" id="storiesContainer"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="trainingModal">
+    <div class="modal-header">
+      <h2>Training & Tips</h2>
+      <button class="close-btn" data-close="training">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="training-grid" id="trainingGrid"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="aboutModal">
+    <div class="modal-header">
+      <h2>About Us</h2>
+      <button class="close-btn" data-close="about">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="about-content">
+        <div class="about-text">
+          <p>We are a passionate team of cricket enthusiasts dedicated to helping aspiring cricketers reach their full potential.</p>
+          <p>Cricket Academy provides the resources, motivation, and guidance you need to excel.</p>
+        </div>
+
+        <h3 class="social-title">Connect With Us</h3>
+        <div class="social-grid">
+          <a href="#" class="social-card"><img src="photos/facebook.webp"><span>Facebook</span></a>
+          <a href="#" class="social-card"><img src="photos/instagram.webp"><span>Instagram</span></a>
+          <a href="#" class="social-card"><img src="photos/x.webp"><span>X</span></a>
+          <a href="#" class="social-card"><img src="photos/linkedin.webp"><span>LinkedIn</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
